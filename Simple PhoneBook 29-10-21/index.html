@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneBook</title>
+
+   
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/regex.js"></script> -->
+    <script type="text/javascript" src="assets/js/formvalidation.js"></script>
+    <script type="text/javascript" src="assets/js/localstorage.js"></script>
+    <script type="text/javascript" src="assets/js/buttons.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+
+
+    <link rel="stylesheet" href="assets/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/svg-with-js.min.css">
+    <link rel="stylesheet" href="assets/all.min.css">
+    <link rel="stylesheet" href="assets/fontawesome.min.css">
+    
+    <script type="text/javascript" src="assets/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+        
+</head>
+<body style="background-color:#050855;">
+
+  <header>
+    <div class="" >
+      <nav class="idkbar">
+        <h1 class="heading">PhoneBook</h1>
+        <div class=" form-outline alignbar" style="text-align: right;">
+          <input class="idkyrsearch " type="search" placeholder="Type to search..." >
+          <button class="btn round" style="border: none;
+          outline: none;"><svg class="svg-icon" viewBox="0 0 20 20">
+            <path d="M18.125,15.804l-4.038-4.037c0.675-1.079,1.012-2.308,1.01-3.534C15.089,4.62,12.199,1.75,8.584,1.75C4.815,1.75,1.982,4.726,2,8.286c0.021,3.577,2.908,6.549,6.578,6.549c1.241,0,2.417-0.347,3.44-0.985l4.032,4.026c0.167,0.166,0.43,0.166,0.596,0l1.479-1.478C18.292,16.234,18.292,15.968,18.125,15.804 M8.578,13.99c-3.198,0-5.716-2.593-5.733-5.71c-0.017-3.084,2.438-5.686,5.74-5.686c3.197,0,5.625,2.493,5.64,5.624C14.242,11.548,11.621,13.99,8.578,13.99 M16.349,16.981l-3.637-3.635c0.131-0.11,0.721-0.695,0.876-0.884l3.642,3.639L16.349,16.981z"></path>
+          </svg></button>
+        </div>
+      </nav>
+    </div>
+    
+  </header>
+    <div class="container" >
+      
+     
+    <div class="container box">
+      <form>
+        <div class="form-group" style="margin-left: 10%; margin-right: 10%;">
+          <input type="text" class="form-control" id="searchData" onkeyup="searchContacts()" placeholder="Type to search a contact....">
+        </div>
+      </form>
+      <table id="table"  class="table table-striped table-responsive" style="text-align: center;">
+        
+        <thead>
+          
+          <tr style="text-align: center;">
+            <th style="text-align: center;" scope="col">Name</th>
+            <th style="text-align: center;" scope="col">Email</th>
+            <th style="text-align: center;" scope="col">Phone No.</th>
+            <th style="text-align: center;" scope="col">Option</th>
+          </tr>
+        </thead>
+        <tbody >
+            
+           <!-- <tr>
+            <td><button class="delbtn btn btn-info " id="delbtn"></button>
+                <button class="btn btn-info" style"border: none;
+                outline: none;"><img src="assets/edit-icon.png" width="22px" height="22px"></button>
+            </td>
+         -->
+          <!-- </tr>
+          <tr> -->
+            <!-- <th id="hey" style="text-align: center;" scope="row">Spiderman</th>
+            <td id="heyhey">makri666@gmail.com</td>
+            <td id="heyheyhey">03096969699</td>
+            <td><button class="btn btn-info" style="border: none;
+              outline: none;"><img src="assets/delete-icon.png" width="22px" height="22px"></button>
+                <button class="btn btn-info" style="border: none;
+                outline: none;"><img src="assets/edit-icon.png" width="22px" height="22px"></button>
+            </td> -->
+      
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="btn-toolbar" style="margin-left: 5%;">
+            <div class="btn-group btn-group-md">
+                <button type="button" class="btn btn-primary" style="border: none;
+                outline: none;">1</button>
+                <button type="button" class="btn btn-primary" style="border: none;
+                outline: none;">2</button>
+                <button type="button" class="btn btn-primary" style="border: none;
+                outline: none;">3</button>
+            </div>
+            <button type="button" class="btn btn-info" style="border: none;
+            outline: none;"  data-toggle="modal" data-target="#exampleModalCenter">
+              Add new
+             </button>
+             
+        </div>
+    </div>
+    </div>
+
+    <div>
+<!-- Button trigger modal -->
+   
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"  id="exampleModalLongTitle">Add New</h5>
+          <button type="button" style="border: none;
+          outline: none;" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="">
+            <form class="form-group" id="formSubmit" onchange=validation()>
+                
+                
+                <input class="form-control" type="text" placeholder="Name" id="name">
+                <span id="nameerror" class="text-danger"></span>
+                <input class="form-control" type="email" placeholder="Email" id="email" >
+                <span id="emailerror" class="text-danger"></span>
+                <input class="form-control" type="number" placeholder="03000000001" id="number" >
+                <span id="numbererror" class="text-danger"></span>
+                <div class="modal-footer">
+                    <button type="button" style="border: none;
+                    outline: none;" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="save"  onclick=saveData() type="button" style="border: none;
+                    outline: none;" class="btn btn-primary" disabled>Save changes</button>
+                </div>
+    
+    
+            </form>
+        </div>
+        
+      </div>
+    </div>
+   </div>
+    </div>
+    <div c>
+<footer class="downbar">
+  <h1 class="heading">Dekhlo</h1>
+  <!-- <div class="searchbox">
+    <input type="text" class="searchbar" placeholder="Type to search...">
+    <a href="#" class="searchbtn">
+      <i class="fas fa-search"></i>
+    </a>
+  </div> -->
+</footer>
+</body>
+</html>

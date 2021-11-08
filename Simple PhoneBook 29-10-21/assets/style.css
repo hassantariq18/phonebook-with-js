@@ -1,0 +1,233 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: block;
+
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.box{
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  margin: 5px;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 0 10px 5px whitesmoke ;
+  opacity: 0.95;
+  display: block;
+}
+.heading{
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+ @media (max-width: 550px) {
+  .box{
+  width: max-content;
+  height: max-content;
+  } 
+}
+
+
+
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+
+/* For Search Button  */
+
+/* .searchbox{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbtn{
+  width: 5rem;
+  height: 5rem;
+  background-color: whitesmoke;
+  color: brown;
+  position: absolute;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+
+}
+
+
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+
+.searchbox:hover > .searchbar{
+  width: 25rem;
+
+
+} */
+
+/* Navbar stuff */
+
+.idkbar{
+  background-color: #020325;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 5%;
+  position: relative;
+  flex:content;
+}
+
+@media (max-width: 550px) {
+  .idkbar{
+
+  } 
+}
+
+.downbar{
+  overflow: hidden;
+  background-color: #020325;
+  margin-top: 5rem;
+
+}
+
+/* search icon */
+
+.round{
+  border-radius: 40px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: none;
+}
+.idkyrsearch{
+  border: none;
+  outline: none;
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  padding: 0.35rem;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 5px 2px whitesmoke;
+}
+.round:hover{
+  transition: all 0.2s linear;
+}
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.btn{
+  border: none;
+  outline: none;
+}
+.btn:focus{
+  border: none;
+  outline: none;
+}
+.round:focus{
+  border: none;
+  outline: none;
+}
+.btn:active{
+  border: none;
+  outline: none;
+
+
+.btn:hover{
+    box-shadow: 0 0 10px 1px black;
+}
+.round:active{
+  border: none;
+  outline: none;
+}
+
+
+
+/* aligning a search bar */
+
+
+.alignbar{
+  text-align: right;
+  position:absolute;
+   top:0;
+   right:0; 
+   margin-top: 2rem; 
+   margin-right: 2rem;
+}
+
+
+.searchbar{
+  border-radius: 5rem;
+  border: none;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+#delbtn{
+  
+  border: none !important;
+    outline: none !important;
+    background-image:  url("assets/delete-icon.png") !important;
+    width: 22px !important;
+    height: 22px !important;
+}
+
+#editbtn{
+  display: none;
+}
+
+.delbtn{
+    border: none !important;
+    outline: none !important;
+    background-image:  url("assets/delete-icon.png") !important;
+    width: 22px !important;
+    height: 22px !important; 
+}
